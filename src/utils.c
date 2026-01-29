@@ -8,3 +8,6 @@ void print_bar_chart(int year, double amount, double max_ref) {
     for (int i = 0; i < width; i++) printf("#");
     printf(" (%.0f RON)\n", amount);
 }
+void export_to_csv(FILE *fp, int year, double invested, double balance, double profit) {
+    if (fp) fprintf(fp, "%d,%.2f,%.2f,%.2f\n", year, invested, balance, profit);
+}
