@@ -8,3 +8,7 @@ double calculate_yearly_balance(double current_balance, double rate, double mont
     }
     return current_balance;
 }
+double adjust_for_inflation(double amount, double inflation_rate, int years) {
+    if (inflation_rate == 0) return amount;
+    return amount / pow(1.0 + inflation_rate, years);`
+}
